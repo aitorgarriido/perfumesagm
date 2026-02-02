@@ -309,27 +309,31 @@ footer {
 }
 
 /* =========================================
-   CATÁLOGO – RESPONSIVE FINAL
+   CATÁLOGO – RESPONSIVE FINAL (CORREGIDO)
    ========================================= */
-/* MÓVIL: 2 EN 2 */
+
+/* Móvil: 2 columnas obligatorias */
 .catalog {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 15px;
     padding: 10px;
 }
 
-/* TABLET: 3 EN 3 */
+/* Tablet: 3 columnas (Punto medio) */
 @media (min-width: 600px) {
     .catalog {
         grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
 }
 
-/* ESCRITORIO: 4 EN 4 */
+/* Ordenador: 4 columnas obligatorias */
 @media (min-width: 1024px) {
     .catalog {
         grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding: 0;
     }
 }
 
