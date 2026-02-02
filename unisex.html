@@ -23,6 +23,15 @@
 
     <main class="container">
         <h2 class="category-title">Fragancias Sin Límites</h2>
+
+        <!-- BUSCADOR LUJO -->
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Buscar perfume..."
+            onkeyup="buscarPerfume()"
+        >
+
         <section class="catalog">
             <div class="product-card">
                 <div class="product-image"><img src="imgindex/shagoud.jfif" alt="Swiss Arabian Shaghaf Oud"></div>
@@ -168,6 +177,17 @@
             const mensaje = `Hola, quiero información sobre el perfume ${producto}`;
             const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
             window.open(url, "_blank");
+        }
+
+        // BUSCADOR POR NOMBRE
+        function buscarPerfume() {
+            const texto = document.getElementById("searchInput").value.toLowerCase();
+            const cards = document.querySelectorAll(".product-card");
+
+            cards.forEach(card => {
+                const nombre = card.querySelector("h3").innerText.toLowerCase();
+                card.style.display = nombre.includes(texto) ? "block" : "none";
+            });
         }
     </script>
 </body>

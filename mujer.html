@@ -5,7 +5,6 @@
     <title>Perfume AGM | Colección Mujer</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -31,6 +30,9 @@
     <main class="container">
         <h2 class="category-title">Fragancias Femeninas</h2>
 
+        <!-- BUSCADOR AÑADIDO -->
+        <input type="text" id="searchInput" placeholder="Buscar perfume..." onkeyup="buscarPerfume()">
+
         <section class="catalog">
 
             <div class="product-card">
@@ -42,9 +44,7 @@
                     <p class="olfativas"><strong>Notas olfativas:</strong> Floral, vainilla, almendra</p>
                     <p class="similar"><strong>Perfume similar:</strong> Carolina Herrera Good Girl</p>
                     <p class="price">29€</p>
-                    <button class="btn-detail" onclick="enviarWhatsApp('Lattafa Qimmah')">
-                        Pedir información
-                    </button>
+                    <button class="btn-detail" onclick="enviarWhatsApp('Lattafa Qimmah')">Pedir información</button>
                 </div>
             </div>
 
@@ -57,9 +57,7 @@
                     <p class="olfativas"><strong>Notas olfativas:</strong> Floral, atalcado, almizcle</p>
                     <p class="similar"><strong>Perfume similar:</strong> Marly delina exclusif</p>
                     <p class="price">43€</p>
-                    <button class="btn-detail" onclick="enviarWhatsApp('Armaf Club de Nuit White Imperiale')">
-                        Pedir información
-                    </button>
+                    <button class="btn-detail" onclick="enviarWhatsApp('Armaf Club de Nuit White Imperiale')">Pedir información</button>
                 </div>
             </div>
 
@@ -69,12 +67,10 @@
                 </div>
                 <div class="product-info">
                     <h3>Zimaya Tiramisu S'mores</h3>
-                    <p class="olfativas"><strong>Notas olfativas:</strong> Dulce, almizcle, Vainilla</p>
+                    <p class="olfativas"><strong>Notas olfativas:</strong> Dulce, almizcle, vainilla</p>
                     <p class="similar"><strong>Perfume similar:</strong> Kayali 81</p>
                     <p class="price">38€</p>
-                    <button class="btn-detail" onclick="enviarWhatsApp('Zimaya Tiramisu S\'mores')">
-                        Pedir información
-                    </button>
+                    <button class="btn-detail" onclick="enviarWhatsApp('Zimaya Tiramisu S\'mores')">Pedir información</button>
                 </div>
             </div>
 
@@ -87,9 +83,7 @@
                     <p class="olfativas"><strong>Notas olfativas:</strong> Dulce, caramelo, vainilla</p>
                     <p class="similar"><strong>Perfume similar:</strong> Cirque du Soleil</p>
                     <p class="price">28€</p>
-                    <button class="btn-detail" onclick="enviarWhatsApp('Paris Corner Minya Caramel Dulce')">
-                        Pedir información
-                    </button>
+                    <button class="btn-detail" onclick="enviarWhatsApp('Paris Corner Minya Caramel Dulce')">Pedir información</button>
                 </div>
             </div>
 
@@ -102,9 +96,7 @@
                     <p class="olfativas"><strong>Notas olfativas:</strong> Floral, citrico, amaderado</p>
                     <p class="similar"><strong>Perfume similar:</strong> Le Parfum Royal Elie Saab</p>
                     <p class="price">25€</p>
-                    <button class="btn-detail" onclick="enviarWhatsApp('Lattafa Mazaaji')">
-                        Pedir información
-                    </button>
+                    <button class="btn-detail" onclick="enviarWhatsApp('Lattafa Mazaaji')">Pedir información</button>
                 </div>
             </div>
 
@@ -117,9 +109,7 @@
                     <p class="olfativas"><strong>Notas olfativas:</strong> Vainilla, caramelo, floral</p>
                     <p class="similar"><strong>Perfume similar:</strong> Kayali 81</p>
                     <p class="price">37€</p>
-                    <button class="btn-detail" onclick="enviarWhatsApp('Lattafa Yara Elixir')">
-                        Pedir información
-                    </button>
+                    <button class="btn-detail" onclick="enviarWhatsApp('Lattafa Yara Elixir')">Pedir información</button>
                 </div>
             </div>
 
@@ -132,9 +122,7 @@
                     <p class="olfativas"><strong>Notas olfativas:</strong> Dulce, afrutado, cítrico</p>
                     <p class="similar"><strong>Perfume similar:</strong> Marly oriana</p>
                     <p class="price">39€</p>
-                    <button class="btn-detail" onclick="enviarWhatsApp('Ansaam Gold Lattafa')">
-                        Pedir información
-                    </button>
+                    <button class="btn-detail" onclick="enviarWhatsApp('Ansaam Gold Lattafa')">Pedir información</button>
                 </div>
             </div>
 
@@ -147,9 +135,7 @@
                     <p class="olfativas"><strong>Notas olfativas:</strong> Almizcle, ambar, amaderado</p>
                     <p class="similar"><strong>Perfume similar:</strong> Baccarat Rouge 540</p>
                     <p class="price">26€</p>
-                    <button class="btn-detail" onclick="enviarWhatsApp('Lattafa Opulent Musk')">
-                        Pedir información
-                    </button>
+                    <button class="btn-detail" onclick="enviarWhatsApp('Lattafa Opulent Musk')">Pedir información</button>
                 </div>
             </div>
 
@@ -159,12 +145,10 @@
                 </div>
                 <div class="product-info">
                     <h3>Armaf Island Bliss</h3>
-                    <p class="olfativas"><strong>Notas olfativas:</strong> Vainilla, coco, Dulce</p>
+                    <p class="olfativas"><strong>Notas olfativas:</strong> Vainilla, coco, dulce</p>
                     <p class="similar"><strong>Perfume similar:</strong> Olympea Legend Rabanne</p>
                     <p class="price">38€</p>
-                    <button class="btn-detail" onclick="enviarWhatsApp('Armaf Island Bliss')">
-                        Pedir información
-                    </button>
+                    <button class="btn-detail" onclick="enviarWhatsApp('Armaf Island Bliss')">Pedir información</button>
                 </div>
             </div>
 
@@ -177,9 +161,7 @@
                     <p class="olfativas"><strong>Notas olfativas:</strong> Atalcada, frutal, cereza</p>
                     <p class="similar"><strong>Perfume similar:</strong> Rose Extase Nina Ricci</p>
                     <p class="price">43€</p>
-                    <button class="btn-detail" onclick="enviarWhatsApp('Armaf Yum Yum')">
-                        Pedir información
-                    </button>
+                    <button class="btn-detail" onclick="enviarWhatsApp('Armaf Yum Yum')">Pedir información</button>
                 </div>
             </div>
 
@@ -190,11 +172,9 @@
                 <div class="product-info">
                     <h3>Armaf Club de Nuit Maleka</h3>
                     <p class="olfativas"><strong>Notas olfativas:</strong> Atalcada, iris, amaderada</p>
-                    <p class="similar"><strong>Perfume similar:</strong> Very Good Girl Carolina Herrera </p>
+                    <p class="similar"><strong>Perfume similar:</strong> Very Good Girl Carolina Herrera</p>
                     <p class="price">51€</p>
-                    <button class="btn-detail" onclick="enviarWhatsApp('Armaf Club de Nuit Maleka')">
-                        Pedir información
-                    </button>
+                    <button class="btn-detail" onclick="enviarWhatsApp('Armaf Club de Nuit Maleka')">Pedir información</button>
                 </div>
             </div>
 
@@ -205,13 +185,12 @@
                 <div class="product-info">
                     <h3>Paris Corner Qissa Delicious</h3>
                     <p class="olfativas"><strong>Notas olfativas:</strong> Atalcada, dulce, vainilla</p>
-                    <p class="similar"><strong>Perfume similar:</strong> Sweet Tooth Sabrina Carpenter </p>
+                    <p class="similar"><strong>Perfume similar:</strong> Sweet Tooth Sabrina Carpenter</p>
                     <p class="price">32€</p>
-                    <button class="btn-detail" onclick="enviarWhatsApp('Paris Corner Qissa Delicious')">
-                        Pedir información
-                    </button>
+                    <button class="btn-detail" onclick="enviarWhatsApp('Paris Corner Qissa Delicious')">Pedir información</button>
                 </div>
             </div>
+
         </section>
     </main>
 
@@ -225,6 +204,16 @@
             const mensaje = `Hola, quiero información sobre el perfume ${producto}`;
             const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
             window.open(url, "_blank");
+        }
+
+        function buscarPerfume() {
+            const texto = document.getElementById("searchInput").value.toLowerCase();
+            const cards = document.querySelectorAll(".product-card");
+
+            cards.forEach(card => {
+                const nombre = card.querySelector("h3").innerText.toLowerCase();
+                card.style.display = nombre.includes(texto) ? "block" : "none";
+            });
         }
     </script>
 

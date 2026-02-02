@@ -358,3 +358,48 @@ footer {
         grid-template-columns: repeat(4, 1fr) !important;
     }
 }
+/* =========================================
+   BUSCADOR LUJO – ESTILO PERFUMERÍA NICHE
+   ========================================= */
+
+#searchInput {
+    display: block;
+    margin: 0 auto 60px;
+    width: 420px;
+    max-width: 90%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.4);
+    padding: 14px 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--text-main);
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+}
+
+/* Placeholder elegante */
+#searchInput::placeholder {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+}
+
+/* Hover sutil */
+#searchInput:hover {
+    border-bottom-color: var(--accent);
+}
+
+/* Focus premium */
+#searchInput:focus {
+    outline: none;
+    border-bottom-color: var(--accent);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Línea animada al focus */
+#searchInput:focus::placeholder {
+    color: transparent;
+}
