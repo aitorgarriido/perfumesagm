@@ -1,0 +1,360 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL (ESTILO LUJO)
+   ========================================= */
+:root {
+    --gold: #c5a059;
+    --dark-bg: #0a0a0a;
+    --card-bg: #151515;
+    --text-main: #e0e0e0;
+    --text-muted: #999;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+}
+
+/* =========================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================= */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #000;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.logo {
+    max-width: 200px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.nav-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--gold);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--gold);
+    transition: 0.3s;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+/* =========================================
+   CONTENEDOR Y TÍTULOS
+   ========================================= */
+.container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 25px;
+}
+
+.category-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+/* =========================================
+   CATÁLOGO Y TARJETAS DE PRODUCTO
+   ========================================= */
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.product-card {
+    background: var(--card-bg);
+    border: 1px solid #222;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+/* El recuadro de la foto */
+.product-box {
+    background-color: #000;
+    border: 1px solid #333;
+    padding: 20px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: border-color 0.4s ease;
+}
+
+.product-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.product-card:hover .product-box img {
+    transform: scale(1.1);
+}
+
+/* Información del producto */
+.product-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.notes-container {
+    margin: 15px 0;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 2px;
+}
+
+.notes-label {
+    display: block;
+    color: var(--gold);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.product-notes {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin: 0;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.price {
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+.btn-detail {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 12px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-detail:hover {
+    background: var(--gold);
+    color: #000;
+}
+
+/* =========================================
+   COLORES POR PÁGINA (DINÁMICOS)
+   ========================================= */
+
+/* MUJER - Acento Rosa Gold */
+.page-mujer { --accent: #e29b9b; }
+.page-mujer .category-title { color: var(--accent); }
+.page-mujer .notes-label { color: var(--accent); }
+.page-mujer .product-card:hover { border-color: var(--accent); }
+.page-mujer .product-card:hover .product-box { border-color: var(--accent); }
+.page-mujer .btn-detail { color: var(--accent); border-color: var(--accent); }
+.page-mujer .btn-detail:hover { background: var(--accent); color: #000; }
+
+/* HOMBRE - Acento Midnight Blue */
+.page-hombre { --accent: #4a6b8a; }
+.page-hombre .category-title { color: var(--accent); }
+.page-hombre .notes-label { color: var(--accent); }
+.page-hombre .product-card:hover { border-color: var(--accent); }
+.page-hombre .product-card:hover .product-box { border-color: var(--accent); }
+.page-hombre .btn-detail { color: var(--accent); border-color: var(--accent); }
+.page-hombre .btn-detail:hover { background: var(--accent); color: #000; }
+
+/* UNISEX - Acento Gold (Logo) */
+.page-unisex { --accent: #c5a059; }
+.page-unisex .category-title { color: var(--accent); }
+.page-unisex .notes-label { color: var(--accent); }
+.page-unisex .product-card:hover { border-color: var(--accent); }
+.page-unisex .product-card:hover .product-box { border-color: var(--accent); }
+.page-unisex .btn-detail { color: var(--accent); border-color: var(--accent); }
+.page-unisex .btn-detail:hover { background: var(--accent); color: #000; }
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 50px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    border-top: 1px solid #222;
+    margin-top: 50px;
+}
+/* --- GRID DE INICIO --- */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* --- TARJETA CUADRADA --- */
+.category-box {
+    position: relative;
+    aspect-ratio: 1 / 1; /* Esto garantiza que sea un cuadrado perfecto */
+    background-color: #111;
+    border: 1px solid #222;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+}
+
+/* Contenedor de la imagen */
+.image-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* La imagen llenará el cuadrado sin deformarse */
+    transition: transform 0.8s ease, filter 0.5s ease;
+    filter: brightness(0.7); /* Oscurece un poco la foto para que el texto resalte */
+}
+
+/* Texto sobre la imagen */
+.category-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+}
+
+.category-info h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    letter-spacing: 6px;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.category-info p {
+    color: var(--gold);
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* --- EFECTOS HOVER --- */
+.category-box:hover .image-wrapper img {
+    transform: scale(1.1); /* Zoom a la foto */
+    filter: brightness(0.9); /* Aclara la foto al pasar el mouse */
+}
+
+.category-box:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 30px rgba(197, 160, 89, 0.3);
+}
+
+.category-box::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border: 0px solid var(--gold);
+    transition: border 0.3s ease;
+    pointer-events: none;
+}
+
+.category-box:hover::after {
+    border: 10px solid rgba(197, 160, 89, 0.1); /* Marco interno sutil */
+}
+/* --- SOLO ESTO PARA EL CATALOGO --- */
+.catalog {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* Fuerza 2 columnas de izq a der */
+    gap: 10px; 
+    padding: 10px;
+}
+
+/* --- SOLO ESTO PARA LA TARJETA --- */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    /* Mantén aquí tus colores y bordes originales */
+}
+
+/* --- ESTO PARA QUE LA FOTO SEA CUADRADA --- */
+.product-box {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Esto hace el cuadrado perfecto */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que la foto no se estire */
+}
+
+/* --- PARA QUE EN PC SE VEAN DE 4 EN 4 (OPCIONAL) --- */
+@media (min-width: 768px) {
+    .catalog {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
