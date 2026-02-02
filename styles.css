@@ -111,7 +111,6 @@ header {
     flex-direction: column;
 }
 
-/* El recuadro de la foto */
 .product-box {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -136,7 +135,6 @@ header {
     transform: scale(1.1);
 }
 
-/* Información del producto */
 .product-info h3 {
     font-size: 1.6rem;
     margin-bottom: 10px;
@@ -195,26 +193,20 @@ header {
    COLORES POR PÁGINA (DINÁMICOS)
    ========================================= */
 .page-mujer { --accent: #e29b9b; }
-.page-mujer .category-title { color: var(--accent); }
-.page-mujer .notes-label { color: var(--accent); }
-.page-mujer .product-card:hover { border-color: var(--accent); }
-.page-mujer .product-card:hover .product-box { border-color: var(--accent); }
+.page-mujer .category-title, .page-mujer .notes-label,
+.page-mujer .product-card:hover, .page-mujer .product-card:hover .product-box,
 .page-mujer .btn-detail { color: var(--accent); border-color: var(--accent); }
 .page-mujer .btn-detail:hover { background: var(--accent); color: #000; }
 
 .page-hombre { --accent: #4a6b8a; }
-.page-hombre .category-title { color: var(--accent); }
-.page-hombre .notes-label { color: var(--accent); }
-.page-hombre .product-card:hover { border-color: var(--accent); }
-.page-hombre .product-card:hover .product-box { border-color: var(--accent); }
+.page-hombre .category-title, .page-hombre .notes-label,
+.page-hombre .product-card:hover, .page-hombre .product-card:hover .product-box,
 .page-hombre .btn-detail { color: var(--accent); border-color: var(--accent); }
 .page-hombre .btn-detail:hover { background: var(--accent); color: #000; }
 
 .page-unisex { --accent: #c5a059; }
-.page-unisex .category-title { color: var(--accent); }
-.page-unisex .notes-label { color: var(--accent); }
-.page-unisex .product-card:hover { border-color: var(--accent); }
-.page-unisex .product-card:hover .product-box { border-color: var(--accent); }
+.page-unisex .category-title, .page-unisex .notes-label,
+.page-unisex .product-card:hover, .page-unisex .product-card:hover .product-box,
 .page-unisex .btn-detail { color: var(--accent); border-color: var(--accent); }
 .page-unisex .btn-detail:hover { background: var(--accent); color: #000; }
 
@@ -230,7 +222,9 @@ footer {
     margin-top: 50px;
 }
 
-/* --- GRID DE INICIO --- */
+/* =========================================
+   GRID DE INICIO
+   ========================================= */
 .home-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -238,7 +232,9 @@ footer {
     padding: 20px 0;
 }
 
-/* --- TARJETA CUADRADA --- */
+/* =========================================
+   TARJETA CUADRADA
+   ========================================= */
 .category-box {
     position: relative;
     aspect-ratio: 1 / 1;
@@ -313,7 +309,7 @@ footer {
 }
 
 /* =========================================
-   CATÁLOGO – RESPONSIVE CORRECTO
+   CATÁLOGO – RESPONSIVE FINAL
    ========================================= */
 /* MÓVIL: 2 EN 2 */
 .catalog {
@@ -323,8 +319,15 @@ footer {
     padding: 10px;
 }
 
+/* TABLET: 3 EN 3 */
+@media (min-width: 600px) {
+    .catalog {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 /* ESCRITORIO: 4 EN 4 */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .catalog {
         grid-template-columns: repeat(4, 1fr);
     }
