@@ -377,3 +377,35 @@ footer {
 #searchInput:focus::placeholder {
     color: transparent;
 }
+.review-form {
+    max-width: 400px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.review-form input,
+.review-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.review-form button {
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.star-input span {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.star-input span.active {
+    color: #c9a44c;
+}
